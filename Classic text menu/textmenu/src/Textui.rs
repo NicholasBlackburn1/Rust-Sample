@@ -1,4 +1,9 @@
+mod test;
+mod run;
 use std::io::{stdin,stdout,Write};
+use std::process::exit;
+use test::selftest;
+use run::run;
 
 fn input(){
 
@@ -13,8 +18,10 @@ fn input(){
     io::stdin::().read_line(&mut _input).expect(“error: unable to read user input”);
 
      match _input{
-         
-     }
+         1 = selftest();
+         2 = run();  
+         3 = exit(code: i32)
+         }
      
 
 }
