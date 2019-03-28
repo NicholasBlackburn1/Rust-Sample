@@ -1,18 +1,17 @@
-extern crate std;
+extern crate input_stream;
 mod test;
-use std::prelude::*;
+use std::io;
+use input_stream::InputStream;
 use test::selftest;
 
 pub fn input(){
+      println!("pL");
     
-    let mut reader = io::stdin();
-    let input = reader.read_line().ok().expect("Failed to read line");
-    let input_num: Option<int> = from_str(input.as_slice().trim());
+    let stdin = io::stdin();
+    let mut input = InputStream::new(stdin.lock());
+    let integer: i32 = input.scan().expect("An integer");
 
-      println!("Please Enter your choose:");
-      println!("1: Start_Self_Test");
-      println!("2: Start_program");
-      println!("3: QUIT");
-
+    if (integer == 1) {
+      println!("hello 1")
+    }
 }
-     
