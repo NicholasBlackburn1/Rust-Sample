@@ -6,3 +6,4 @@ edition = "2018"
 
 [dependencies]
 input-stream = "0.3.0"
+utp = "0.7.0"

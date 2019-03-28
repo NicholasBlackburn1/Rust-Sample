@@ -3,8 +3,8 @@ mod test;
 mod run;
 use std::io;
 use input_stream::InputStream;
-use test::selftest;
-use run::run;
+use get::get;
+use sendudp::send;
 
 pub fn input(){
       println!("Rust--Menu");
@@ -16,10 +16,10 @@ pub fn input(){
 
     if (integer == 1) {
       println!("Running self test");
-      selftest();
+      get();
     }
     if (integer == 2){
       println!("Runing run");
-      run();
+      sendudp();
     }
 }
