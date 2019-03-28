@@ -18,4 +18,8 @@ pub fn input(){
       println!("Running self test");
       selftest();
     }
+    if (integer == 2){
+      println!("Runing run");
+      run();
+    }
 }
